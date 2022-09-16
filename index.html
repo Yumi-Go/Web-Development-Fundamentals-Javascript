@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+	<link rel="stylesheet" media="screen" href="style.css">
+	<script src="script.js"></script>
+</head>
+<!-- all mulan image source: https://www.disneyclips.com/images/mulan2.html -->
+
+<body>
+	<header id="header">
+		<h1>Choose Your Favourite Disney Character!</h1>
+		<hr>
+	</header>
+	<main id="main">
+		<div id="left_side">
+			<div id="left_side_menu">
+				<span class="button_menu" onclick="showSubmenu()">Other Websites</span><br>
+				<div class="hide" id="expandingMenu">
+					<p class="sub_menu1"><a href="https://www.disney.com/" target="_blank">Disney</a></p>
+					<p class="sub_menu2"><a href="https://www.disneyplus.com/en-ie/welcome?cid=DSS-Search-Google-71700000064658728-&s_kwcid=AL!8468!3!441062551400!e!!g!!disney&&cid=DSS-Search-Google-71700000064658728-&s_kwcid=AL!8468!3!441062551400!e!!g!!disney&gclid=Cj0KCQiA5vb-BRCRARIsAJBKc6Ln30zhRmdFZLxK11VRN0ddE9wRyUNIj9KimQhi-Mbj9p4HQY18Jo0aAqfrEALw_wcB&gclsrc=aw.ds" target="_blank">Disney +</a></p>
+				</div>
+			</div>
+			<div id="slider">
+				<label for="like_disney" id="slider_label">How much do you like Disney?</label><br>
+				<input type="range" min="0" max="100" id="like_disney" onchange="slider()"><br>
+				<span id="comment"></span>
+			</div>
+			<div id="left_side_img">
+				<img src="images/mulan3.png" onmouseover="img_mouseOver()" onmouseout="img_mouseOut()" id="mulan1" alt="Mulan 1" title="Mulan" height="180">
+			</div>
+		</div>
+		<div id="right_side">
+			<form onsubmit="chooseCharacter()" id="character_input">
+				<label for="choose_character" id="input_label">Character</label>
+					<select id="choose_character" name="choose_character">
+						<option value="______">Choose Your Favourite Character</option>
+						<option value="Mulan">Mulan</option>
+						<option value="Cri-Kee">Cri-Kee</option>
+						<option value="Emperor">Emperor</option>
+						<option value="Khan">Khan</option>
+					</select>
+					<input type="submit" value="Choose" id="submit">
+			<p id="favourite_result">Your Favourite Character is <span id="favourite_character">______</span>!</p>
+			</form>			
+			<img src="images/mulan_main2.png" id="mulan_main_img" alt="Mulan Main" title="Disney Mulan">
+		</div>
+
+		<div id="bottom_character_info">
+			<div id="random_info">
+				<p><span id="button_random" onclick="characterRandom()">What Character will you get!</span> <span id="match_character"></span></p>
+				<p id="introduction">Click above</p>
+				
+			</div>
+			<div id="random_img">
+				<p><img src="images/disney_logo.png" id="random_character" alt="Random Character" height="120"></p>
+				<!-- https://en.wikipedia.org/wiki/File:Disney_wordmark.svg -->
+			</div>
+		</div>
+	</main>
+	<footer>
+		<details>
+			<summary>
+		        Copyright &copy; Disney &copy; Disney•Pixar &copy; &amp; ™ Lucasfilm LTD &copy; Marvel. &copy; 2020 <span><a href="mailto:yumi.go@cit.ie">Yumi Go</a></span>. All Rights Reserved.
+			</summary>
+		</details>
+	</footer>
+</body>
+</html>
